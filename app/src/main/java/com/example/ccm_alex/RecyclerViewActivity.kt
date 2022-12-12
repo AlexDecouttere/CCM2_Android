@@ -2,7 +2,6 @@ package com.example.ccm_alex
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.HapticFeedbackConstants
 import android.view.View
 import android.widget.Toast
@@ -38,7 +37,6 @@ class RecyclerViewActivity : AppCompatActivity() {
         // Generate data and give it to adapter
         adapter.submitList(generateFakeData())
 
-
     }
 
     private fun onItemClick(objectDataSample: ObjectDataSample, view : View) {
@@ -51,40 +49,31 @@ class RecyclerViewActivity : AppCompatActivity() {
         val result = mutableListOf<MyObjectForRecyclerView>()
         // Create data raw
         mutableListOf(
-            ObjectDataSample(R.drawable.wintermist_2080a_euna ,"One Plus 6T", "Android"),
-            ObjectDataSample(R.drawable.wintermist_2080a_euna ,"One Plus 6", "Android"),
-            ObjectDataSample(R.drawable.wintermist_2080a_euna ,"One Plus 7", "Android"),
-            ObjectDataSample(R.drawable.wintermist_2080a_euna, "Galaxy S10", "Android"),
-            ObjectDataSample(R.drawable.wintermist_2080a_euna, "Galaxy S20", "Android"),
-            ObjectDataSample(R.drawable.wintermist_2080a_euna, "Galaxy S21", "Android"),
-            ObjectDataSample(R.drawable.iphone_13_pink_select_2021, "Iphone 10", "Ios"),
-            ObjectDataSample(R.drawable.iphone_13_pink_select_2021, "Iphone 11", "Ios"),
-            ObjectDataSample(R.drawable.wintermist_2080a_euna, "Galaxy S20 Plus", "Android"),
-            ObjectDataSample(R.drawable.wintermist_2080a_euna, "Galaxy S20 Ultra", "Android"),
-            ObjectDataSample(R.drawable.iphone_13_pink_select_2021, "Iphone SE", "Ios"),
-            ObjectDataSample(R.drawable.iphone_13_pink_select_2021, "Iphone 12", "Ios"),
-            ObjectDataSample(R.drawable.iphone_13_pink_select_2021, "Iphone 13", "Ios"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/c/c7/Windows_logo_-_2012.png","Nokia Lumia 930", "Window"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/c/c7/Windows_logo_-_2012.png","Microsoft Lumia 550", "Window"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/c/c7/Windows_logo_-_2012.png" ,"Nokia Lumia 1020T", "Window"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png" ,"One Plus 6T", "Android"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png" ,"One Plus 6", "Android"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png" ,"One Plus 7", "Android"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png", "Galaxy S10", "Android"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png", "Galaxy S20", "Android"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png", "Galaxy S21", "Android"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Apple-logo.png/640px-Apple-logo.png", "Iphone 10", "Ios"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Apple-logo.png/640px-Apple-logo.png", "Iphone 11", "Ios"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png", "Galaxy S20 Plus", "Android"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png", "Galaxy S20 Ultra", "Android"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Apple-logo.png/640px-Apple-logo.png", "Iphone SE", "Ios"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Apple-logo.png/640px-Apple-logo.png", "Iphone 12", "Ios"),
+            ObjectDataSample("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Apple-logo.png/640px-Apple-logo.png", "Iphone 13", "Ios"),
         ).groupBy {
             // Split in 2 list, modulo and not
-            it.osName == "Android"
-        }.forEach { (isAndroid, items) ->
+            it.osName
+        }.forEach { (osName, items) ->
             // For each mean for each list split
             // Here we have a map (key = isModulo) and each key have a list of it's items
-            val nbAndroid = items.filter { it.osName == "Android" }.size
-            val nbIphone = items.filter { it.osName == "Ios" }.size
-
-            if (isAndroid){
-                result.add(ObjectDataHeaderSample("Android"))
-            }else{
-                result.add(ObjectDataHeaderSample("Ios"))
-            }
+            result.add(ObjectDataHeaderSample(osName))
             result.addAll(items)
-            if (isAndroid){
-                result.add(ObjectDataFooterSample("total d'android connus: $nbAndroid"))
-            }else{
-                Log.d(result.size.toString(),"test")
-                result.add(ObjectDataFooterSample("total d'iphone connus: $nbIphone"))
-            }
+            result.add(ObjectDataFooterSample("$osName connus: ${items.size}"))
         }
         return result
     }

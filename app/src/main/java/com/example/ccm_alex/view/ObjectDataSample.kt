@@ -13,7 +13,7 @@ data class ObjectDataFooterSample(
 ) : MyObjectForRecyclerView()
 
 data class ObjectDataSample(
-    val drawable: Int,
+    val drawable: String,
     val phoneName: String,
     val osName: String
 ):MyObjectForRecyclerView()

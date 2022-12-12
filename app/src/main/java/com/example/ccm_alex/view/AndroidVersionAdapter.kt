@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.ccm_alex.R
 import com.example.ccm_alex.databinding.ItemCustomRecyclerBinding
 import com.example.ccm_alex.databinding.ItemCustomRecyclerFooterBinding
 import com.example.ccm_alex.databinding.ItemCustomRecyclerHeaderBinding
@@ -96,7 +98,10 @@ class AndroidVersionViewHolder(
 
     fun bind(objectDataSample: ObjectDataSample) {
         ui = objectDataSample
-        binding.itemRecyclerViewImageView.setImageResource(objectDataSample.drawable)
+        Glide.with(itemView.context)
+            .load(objectDataSample.drawable)
+            .placeholder(R.drawable.ic_launcher_background)
+            .into(binding.itemRecyclerViewImageView)
         binding.itemRecyclerViewPhoneName.text = objectDataSample.phoneName
         binding.itemRecyclerViewOsName.text = objectDataSample.osName
     }
