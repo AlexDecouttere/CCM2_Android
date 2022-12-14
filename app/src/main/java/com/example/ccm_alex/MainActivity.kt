@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ccm_alex.databinding.ActivityMainBinding
+import com.example.ccm_alex.memes.view.MemesActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,12 +16,22 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener{
             generateIntentAndGoTo()
         }
+        binding.buttonMeme.setOnClickListener{
+            generateIntentAndGoToMemes()
+        }
 
     }
 
     private fun generateIntentAndGoTo() {
         // Kotlin style
         val intentKotlin = Intent(this, RecyclerViewActivity::class.java)
+        // Start activity
+        startActivity(intentKotlin)
+    }
+
+    private fun generateIntentAndGoToMemes() {
+        // Kotlin style
+        val intentKotlin = Intent(this, MemesActivity::class.java)
         // Start activity
         startActivity(intentKotlin)
     }
