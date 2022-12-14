@@ -39,6 +39,8 @@ class RecyclerViewActivity : AppCompatActivity() {
         // We set the adapter to recycler view
         binding.recyclerView.adapter = adapter
 
+        binding.buttonAddItem.setOnClickListener { addRandomPhoneData() }
+        binding.deleteAllItemButton.setOnClickListener { deletePhoneData() }
 
         // Generate data and give it to adapter
 
@@ -57,4 +59,13 @@ class RecyclerViewActivity : AppCompatActivity() {
         view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
         Toast.makeText(this, objectDataSample.phoneName, Toast.LENGTH_LONG).show()
     }
+
+    private fun addRandomPhoneData() {
+        viewModel.insertPhoneData("one plus 6t", "android", "https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png")
+    }
+
+    private fun deletePhoneData() {
+        viewModel.deleteAllPhoneData()
+    }
+
 }
