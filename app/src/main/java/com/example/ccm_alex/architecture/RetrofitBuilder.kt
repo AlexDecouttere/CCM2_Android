@@ -1,6 +1,6 @@
 package com.example.ccm_alex.architecture
 
-import com.example.ccm_alex.memes.remote.MemesEndpoint
+import com.example.ccm_alex.memes.data.remote.MemesEndpoint
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

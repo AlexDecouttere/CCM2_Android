@@ -8,8 +8,6 @@
     android:layout_margin="5dp"
     >
 
-
-
     <TextView
         android:id="@+id/itemRecyclerViewPhoneName"
         android:layout_width="0dp"
@@ -22,7 +20,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@tools:sample/cities" />
-
 
     <TextView
         android:id="@+id/itemRecyclerViewOsName"

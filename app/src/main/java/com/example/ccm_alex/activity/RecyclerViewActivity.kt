@@ -1,4 +1,4 @@
-package com.example.ccm_alex
+package com.example.ccm_alex.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,9 +9,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ccm_alex.androidVersion.view.AndroidVersionAdapter
+import com.example.ccm_alex.androidVersion.view.MyObjectForRecyclerView
+import com.example.ccm_alex.androidVersion.view.ObjectDataSample
 import com.example.ccm_alex.databinding.ActivityRecyclerBinding
-import com.example.ccm_alex.view.*
-import com.example.ccm_alex.viewModel.AndroidVersionViewModel
+import com.example.ccm_alex.androidVersion.viewModel.AndroidVersionViewModel
 
 class RecyclerViewActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRecyclerBinding

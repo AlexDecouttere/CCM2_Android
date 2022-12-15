@@ -1,4 +1,4 @@
-package com.example.ccm_alex.memes.view
+package com.example.ccm_alex.memes.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,14 +6,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.ccm_alex.databinding.ItemCustomRecyclerBinding
 import com.example.ccm_alex.databinding.ItemCustomRecyclerHeaderBinding
 import com.example.ccm_alex.databinding.ItemMemeBinding
-import com.example.ccm_alex.memes.model.MemeItemsUi
-import com.example.ccm_alex.memes.model.MemesHeader
-import com.example.ccm_alex.memes.model.MemesSample
-import com.example.ccm_alex.memes.model.MemesUi
-import com.example.ccm_alex.view.*
+import com.example.ccm_alex.memes.view.model.MemeItemsUi
+import com.example.ccm_alex.memes.view.model.MemesHeader
+import com.example.ccm_alex.memes.view.model.MemesUi
 
 val diffUtils = object : DiffUtil.ItemCallback<MemeItemsUi>() {
     override fun areItemsTheSame(oldItem: MemeItemsUi, newItem: MemeItemsUi): Boolean {

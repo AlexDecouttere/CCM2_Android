@@ -1,4 +1,4 @@
-package com.example.ccm_alex.memes.view
+package com.example.ccm_alex.memes.view.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +7,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ccm_alex.databinding.ActivityMemesBinding
-import com.example.ccm_alex.memes.model.MemeItemsUi
-import com.example.ccm_alex.memes.model.MemesUi
-import com.example.ccm_alex.memes.viewModel.MemesViewModel
+import com.example.ccm_alex.memes.view.adapter.MemesAdapter
+import com.example.ccm_alex.memes.view.model.MemeItemsUi
+import com.example.ccm_alex.memes.view.viewModel.MemesViewModel
 
 class MemesActivity : AppCompatActivity() {
 

@@ -1,9 +1,10 @@
-package com.example.ccm_alex
+package com.example.ccm_alex.activity
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
+import com.example.ccm_alex.androidVersion.view.LocalDataSourceSample
+import com.example.ccm_alex.androidVersion.view.ObjectDataSample
 import com.example.ccm_alex.architecture.CustomApplication
-import com.example.ccm_alex.view.*
 
 class AndroidVersionRepository {
     private val mPhoneDataDao =

@@ -1,11 +1,11 @@
-package com.example.ccm_alex.viewModel
+package com.example.ccm_alex.androidVersion.viewModel
 
 import androidx.lifecycle.*
-import com.example.ccm_alex.AndroidVersionRepository
-import com.example.ccm_alex.view.MyObjectForRecyclerView
-import com.example.ccm_alex.view.ObjectDataFooterSample
-import com.example.ccm_alex.view.ObjectDataHeaderSample
-import com.example.ccm_alex.view.ObjectDataSample
+import com.example.ccm_alex.activity.AndroidVersionRepository
+import com.example.ccm_alex.androidVersion.view.MyObjectForRecyclerView
+import com.example.ccm_alex.androidVersion.view.ObjectDataFooterSample
+import com.example.ccm_alex.androidVersion.view.ObjectDataHeaderSample
+import com.example.ccm_alex.androidVersion.view.ObjectDataSample
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

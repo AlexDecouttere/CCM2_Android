@@ -1,4 +1,4 @@
-package com.example.ccm_alex.view
+package com.example.ccm_alex.androidVersion.view
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -18,7 +18,7 @@ data class ObjectDataSample(
     val drawable: String,
     val phoneName: String,
     val osName: String
-):MyObjectForRecyclerView()
+): MyObjectForRecyclerView()
 
 @Entity(tableName = "phone_object_table")
 data class LocalDataSourceSample(

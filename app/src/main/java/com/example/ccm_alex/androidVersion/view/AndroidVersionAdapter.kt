@@ -1,4 +1,4 @@
-package com.example.ccm_alex.view
+package com.example.ccm_alex.androidVersion.view
 
 import android.util.Log
 import android.view.LayoutInflater

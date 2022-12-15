@@ -1,10 +1,10 @@
-package com.example.ccm_alex
+package com.example.ccm_alex.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ccm_alex.databinding.ActivityMainBinding
-import com.example.ccm_alex.memes.view.MemesActivity
+import com.example.ccm_alex.memes.view.activity.MemesActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

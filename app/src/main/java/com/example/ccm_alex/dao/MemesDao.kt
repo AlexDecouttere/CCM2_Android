@@ -1,11 +1,11 @@
-package com.example.ccm_alex.Dao
+package com.example.ccm_alex.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.ccm_alex.memes.model.MemesRoom
+import com.example.ccm_alex.memes.data.model.MemesRoom
 
 @Dao
 interface MemesDao {
